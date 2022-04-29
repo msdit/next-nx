@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from 'next'
+import { GetServerSideProps, NextPage } from 'next'
 import Link from 'next/link'
 
 const Index: NextPage = () => {
@@ -9,7 +9,7 @@ const Index: NextPage = () => {
     )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
     return {
         redirect: {
             destination: '/login',
