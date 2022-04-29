@@ -1,18 +1,23 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import './styles.css';
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import { Provider } from 'react-redux'
+import { useStore } from '../redux/store'
+import '../styles/main.scss'
 
 function CustomApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Welcome to site!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
+    const store = useStore(pageProps.initialReduxState)
+    return (
+        <Provider store={store}>
+            <>
+                <Head>
+                    <title>User Management | Masoud Aghaei</title>
+                </Head>
+                <main>
+                    <Component {...pageProps} />
+                </main>
+            </>
+        </Provider>
+    )
 }
 
-export default CustomApp;
+export default CustomApp

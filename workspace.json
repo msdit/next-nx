@@ -1,7 +1,8 @@
 {
-  "version": 2,
-  "projects": {
-    "site": "apps/site",
-    "site-e2e": "apps/site-e2e"
-  }
+    "version": 2,
+    "projects": {
+        "shared-ui": "libs/shared/ui",
+        "shared-utility": "libs/shared/utility",
+        "site": "apps/site"
+    }
 }
