@@ -103,7 +103,7 @@ const AddUserForm: FC<IAddUserFormProps> = () => {
                 </div>
             </form>
             {showError && (
-                <p className="text-red-700 text-sm mb-4">Email has saved!</p>
+                <p className="text-red-700 text-sm mb-4">Email has been saved!</p>
             )}
         </div>
     )
